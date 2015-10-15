@@ -768,10 +768,10 @@ static void control_loop(mysocket_t sd, context_t *ctx) {
             ctx->done = true;
         }
     }
-    printf("\nDONE!\n\n");
     if(ctx->is_active){
       stcp_fin_received(sd);
     }
+    printf("\nWe are finished!\n\n");
     free(hdr);
 }
 /**********************************************************************/
